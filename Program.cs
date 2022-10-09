@@ -324,13 +324,49 @@ void minValue2()
 }
 
 
+//Exercise#6
+
+void repeat()
+{   var validInput = false;
+    string text;
+    int number=0;
+    Console.WriteLine("Enter text");
+    text = Console.ReadLine();
+    Console.WriteLine("You entered " + text);
+
+    while (!validInput)
+    {
+        Console.WriteLine("Enter number");
+        validInput = int.TryParse(Console.ReadLine(), out number);
+        if (!validInput || number % number != 0)
+        {
+            Console.WriteLine("Entered value is invalid. Please, enter integer");
+        }
+        Console.WriteLine("You entered " + number);
+
+        Console.WriteLine("Result is : ");
+        for (int i = 0; i < number; i++)    
+        Console.Write(text);
+
+
+
+
+
+    }
+
+
+
+
+
+
+}
 
 
 
 
 //Output
 
-    Console.WriteLine("Exercise #1");
+Console.WriteLine("Exercise #1");
 maxValue();
     Console.WriteLine("Exercise #2");
 minValue();
@@ -340,6 +376,9 @@ TrySumIfOdd();
 maxValue2();
     Console.WriteLine("Exercise #5");
 minValue2();
+    Console.WriteLine("Exercise #6");
+repeat();
+
 
 Console.ReadLine();
 
