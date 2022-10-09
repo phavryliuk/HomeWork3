@@ -1,8 +1,8 @@
 ﻿using System;
-// first three exercises is done
+
 //буду старатися надалі використовувати англійську мову для коментарів та юзер інтерфейсу
 //англійська у мене крива, складні думки будуть українською
-
+//Exercise#1 
 void maxValue ()
 {
     var validInput = false;
@@ -51,6 +51,8 @@ void maxValue ()
 
 
 }
+
+//Exercise#2
 void minValue ()
 {
     var validInput = false;
@@ -96,8 +98,8 @@ void minValue ()
 
 }
 
-
-// не до кінця розумію, чи правильно зрозумів... При непарній сумі метод має повертати true, та навпаки + вивести на екран цю суму???????????
+//Exercise#3
+// не до кінця розумію, чи правильно зрозумів суть завдання... При непарній сумі метод має повертати true, та навпаки + вивести на екран цю суму???????????
 bool TrySumIfOdd ()
 {
     var validInput = false;
@@ -139,6 +141,7 @@ bool TrySumIfOdd ()
     }
 }
 
+//Exercise#4
 void maxValue2 ()
 {
     var validInput = false;
@@ -229,12 +232,103 @@ void maxValue2 ()
     }
 }
 
+//Exercise#5
+void minValue2()
+{
+    var validInput = false;
+    int firstValue = 0;
+    int secondValue = 0;
+    int thirdValue = 0;
+    int fourthValue = 0;
+
+
+
+
+    while (!validInput)
+    {
+        Console.WriteLine("Enter first Value");
+        validInput = int.TryParse(Console.ReadLine(), out firstValue);
+        if (!validInput || firstValue % firstValue != 0)
+        {
+            Console.WriteLine("Value is invalid. Please, enter integer");
+        }
+    }
+
+    validInput = false;
+    while (!validInput)
+    {
+        Console.WriteLine("Enter second Value");
+        validInput = int.TryParse(Console.ReadLine(), out secondValue);
+        if (!validInput || secondValue % secondValue != 0)
+        {
+            Console.WriteLine("Value is invalid. Please, enter integer");
+        }
+    }
+
+    validInput = false;
+    while (!validInput)
+    {
+        Console.WriteLine("Enter third value");
+        validInput = int.TryParse(Console.ReadLine(), out thirdValue);
+        if (!validInput || thirdValue % thirdValue != 0)
+        {
+            Console.WriteLine("Value is invalid. Please, enter integer");
+        }
+    }
+
+    validInput = false;
+    while (!validInput)
+    {
+        Console.WriteLine("Enter fourth value");
+        validInput = int.TryParse(Console.ReadLine(), out fourthValue);
+        if (!validInput || fourthValue % fourthValue != 0)
+        {
+            Console.WriteLine("Value is invalid. Please, enter integer");
+        }
+    }
+
+
+
+    if
+      (firstValue < secondValue && firstValue < thirdValue && firstValue < fourthValue)
+
+    {
+        Console.WriteLine("Smaller is first value ===> " + firstValue);
+    }
+
+    if
+      (secondValue < firstValue && secondValue < thirdValue && secondValue < fourthValue)
+
+    {
+        Console.WriteLine("Smaller is second value ===> " + secondValue);
+    }
+
+    if
+      (thirdValue < firstValue && thirdValue < secondValue && thirdValue < fourthValue)
+
+    {
+        Console.WriteLine("Smaller is third value ===> " + thirdValue);
+    }
+
+    if
+      (fourthValue < firstValue && fourthValue < secondValue && fourthValue < thirdValue)
+
+    {
+        Console.WriteLine("Smaller is fourth value ===> " + fourthValue);
+    }
+
+    else
+    {
+        Console.WriteLine("Values is equal");
+    }
+}
 
 
 
 
 
 
+//Output
 
     Console.WriteLine("Exercise #1");
 maxValue();
@@ -242,9 +336,10 @@ maxValue();
 minValue();
     Console.WriteLine("Exercise #3");
 TrySumIfOdd();
-Console.WriteLine("Exercise #4");
+    Console.WriteLine("Exercise #4");
 maxValue2();
-
+    Console.WriteLine("Exercise #5");
+minValue2();
 
 Console.ReadLine();
 
